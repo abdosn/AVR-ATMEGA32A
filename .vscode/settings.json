@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "assert.h": "c",
+        "gpio_interface.h": "c",
+        "atmega32.h": "c",
+        "std_types.h": "c"
+    }
+}

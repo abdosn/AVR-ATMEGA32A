@@ -5,10 +5,10 @@
  *      Author: mymorning017
  */
 
-#include "../../SERVICES/STD_TYPES.h"
-#include "../../SERVICES/BIT_MATH.h"
+#include "SERVICES/STD_TYPES.h"
+#include "SERVICES/BIT_MATH.h"
 
-#include "../DIO/DIO_interface.h"
+#include "GPIO/GPIO_interface.h"
 
 #include "EXTI_private.h"
 #include "EXTI_interface.h"
@@ -32,8 +32,7 @@ void EXTI_voidEnable(u8 Copy_u8Line , u8 Copy_u8SenseMode){
 
 	case EXTI_LINE_0:
 	{
-		DIO_enumSetPinDirection( DIO_PORTD , DIO_PIN2 , DIO_INPUT );
-		DIO_enumSetPinValue    ( DIO_PORTD , DIO_PIN2 , DIO_HIGH  );
+		GPIO_enSetPinDirection( GPIOD , Pin2 , INPUT_PULLUP );
 
 		switch (Copy_u8SenseMode ){
 
@@ -68,8 +67,7 @@ void EXTI_voidEnable(u8 Copy_u8Line , u8 Copy_u8SenseMode){
 	}
 	case EXTI_LINE_1:
 	{
-		DIO_enumSetPinDirection( DIO_PORTD , DIO_PIN3 , DIO_INPUT );
-		DIO_enumSetPinValue    ( DIO_PORTD , DIO_PIN3 , DIO_HIGH  );
+		GPIO_enSetPinDirection( GPIOD , Pin3 , INPUT_PULLUP );
 
 		switch (Copy_u8SenseMode ){
 
@@ -104,9 +102,7 @@ void EXTI_voidEnable(u8 Copy_u8Line , u8 Copy_u8SenseMode){
 	}
 	case EXTI_LINE_2:
 	{
-		DIO_enumSetPinDirection( DIO_PORTB , DIO_PIN2 , DIO_INPUT );
-		DIO_enumSetPinValue    ( DIO_PORTB , DIO_PIN2 , DIO_HIGH  );
-
+		GPIO_enSetPinDirection( GPIOB , Pin2 , INPUT_PULLUP );
 		switch (Copy_u8SenseMode ){
 
 		case EXTI_FALLING_EDGE:
