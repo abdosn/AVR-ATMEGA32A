@@ -1,0 +1,39 @@
+\doxysection{EXTI\+\_\+interface.\+h}
+\hypertarget{_e_x_t_i__interface_8h_source}{}\label{_e_x_t_i__interface_8h_source}\index{MCAL/EXTI/EXTI\_interface.h@{MCAL/EXTI/EXTI\_interface.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ EXTI\_interface.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ 25\ Aug\ 2021}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ mymorning017}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ MCAL\_EXTI\_EXTI\_INTERFACE\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MCAL\_EXTI\_EXTI\_INTERFACE\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ EXTI\_LINE\_0\ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ EXTI\_LINE\_1\ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ EXTI\_LINE\_2\ \ \ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ EXTI\_FALLING\_EDGE\ \ \ 0}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ EXTI\_RISING\_EDGE\ \ \ \ 1}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ EXTI\_LOW\_LEVEL\ \ \ \ \ \ 2}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ EXTI\_ON\_CHANGE\ \ \ \ \ \ 3}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ EXTI\_INPUT\_PULLUP\ \ \ 0}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ EXTI\_INPUT\_FLOATING\ 1}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ EXTI\_voidInit();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ EXTI\_voidEnable(u8\ Copy\_u8Line\ ,\ u8\ Copy\_u8SenseMode);}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ EXTI\_voidDisable(u8\ Copy\_u8Line);}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ EXTI\_voidClearFlag(u8\ Copy\_u8Line);}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ EXTI\_voidSetCallBack(\ \ u8\ Copy\_u8Line\ ,\ \textcolor{keywordtype}{void}(*\ Copy\_pvoidCallBack)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MCAL\_EXTI\_EXTI\_INTERFACE\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

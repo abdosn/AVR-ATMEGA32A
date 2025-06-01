@@ -1,0 +1,154 @@
+\doxysection{MCAL/\+GPIO/\+GPIO\+\_\+program.c File Reference}
+\hypertarget{_g_p_i_o__program_8c}{}\label{_g_p_i_o__program_8c}\index{MCAL/GPIO/GPIO\_program.c@{MCAL/GPIO/GPIO\_program.c}}
+
+
+Implementation of GPIO functions for ATMEGA32A microcontroller.  
+
+
+{\ttfamily \#include "{}../../\+SERVICES/\+STD\+\_\+\+TYPES.\+h"{}}\newline
+{\ttfamily \#include "{}../../\+SERVICES/\+BIT\+\_\+\+MATH.\+h"{}}\newline
+{\ttfamily \#include "{}../atmega32.\+h"{}}\newline
+{\ttfamily \#include "{}GPIO\+\_\+interface.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_g_p_i_o__program_8c_a7a447f11b3ad64c618fbe49d368c4da3}{GPIO\+\_\+v\+Set\+Port\+Direction}} (\mbox{\hyperlink{struct_g_p_i_o__t}{GPIO\+\_\+t}} \texorpdfstring{$\ast$}{*}Copy\+\_\+p\+Gpio, \mbox{\hyperlink{_g_p_i_o__interface_8h_a96e4219a73bb1f4b78085a295edf2a38}{GPIO\+\_\+\+Direction\+\_\+t}} Copy\+\_\+u8\+Direction)
+\begin{DoxyCompactList}\small\item\em Sets the direction of an entire GPIO port. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_g_p_i_o__program_8c_a84e32192f59efba23653937a05ec15e9}{GPIO\+\_\+v\+Set\+Port\+Value}} (\mbox{\hyperlink{struct_g_p_i_o__t}{GPIO\+\_\+t}} \texorpdfstring{$\ast$}{*}Copy\+\_\+p\+Gpio, \mbox{\hyperlink{_g_p_i_o__interface_8h_af0229a5a9e5c43d134e4549b505bf0a1}{GPIO\+\_\+\+Output\+\_\+t}} Copy\+\_\+u8\+Value)
+\begin{DoxyCompactList}\small\item\em Sets the output value of an entire GPIO port. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_g_p_i_o__program_8c_a486101d7eaf36a6ca2522232e74e15f7}{GPIO\+\_\+v\+Set\+Pin\+Direction}} (\mbox{\hyperlink{struct_g_p_i_o__t}{GPIO\+\_\+t}} \texorpdfstring{$\ast$}{*}Copy\+\_\+p\+Gpio, \mbox{\hyperlink{_g_p_i_o__interface_8h_a8e4d468ff49c8e962962030d806e0f68}{GPIO\+\_\+\+Pins\+\_\+t}} Copy\+\_\+u8\+Pin\+Number, \mbox{\hyperlink{_g_p_i_o__interface_8h_a96e4219a73bb1f4b78085a295edf2a38}{GPIO\+\_\+\+Direction\+\_\+t}} Copy\+\_\+u8\+Direction)
+\begin{DoxyCompactList}\small\item\em Sets the direction of a specific GPIO pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_g_p_i_o__program_8c_a19b910e04934df92e62d4cc84cc339c6}{GPIO\+\_\+v\+Set\+Pin\+Value}} (\mbox{\hyperlink{struct_g_p_i_o__t}{GPIO\+\_\+t}} \texorpdfstring{$\ast$}{*}Copy\+\_\+p\+Gpio, \mbox{\hyperlink{_g_p_i_o__interface_8h_a8e4d468ff49c8e962962030d806e0f68}{GPIO\+\_\+\+Pins\+\_\+t}} Copy\+\_\+u8\+Pin\+Number, \mbox{\hyperlink{_g_p_i_o__interface_8h_af0229a5a9e5c43d134e4549b505bf0a1}{GPIO\+\_\+\+Output\+\_\+t}} Copy\+\_\+u8\+Value)
+\begin{DoxyCompactList}\small\item\em Sets the output value of a specific GPIO pin. \end{DoxyCompactList}\item 
+u8 \mbox{\hyperlink{_g_p_i_o__program_8c_a71128281bb12827c6720533d5895f030}{GPIO\+\_\+u8\+Get\+Port\+Value}} (\mbox{\hyperlink{struct_g_p_i_o__t}{GPIO\+\_\+t}} \texorpdfstring{$\ast$}{*}Copy\+\_\+p\+Gpio)
+\begin{DoxyCompactList}\small\item\em Reads the input value of an entire GPIO port. \end{DoxyCompactList}\item 
+u8 \mbox{\hyperlink{_g_p_i_o__program_8c_af7ec2d39b3f1b05f071fa83f61cb5cd1}{GPIO\+\_\+u8\+Get\+Pin\+Value}} (\mbox{\hyperlink{struct_g_p_i_o__t}{GPIO\+\_\+t}} \texorpdfstring{$\ast$}{*}Copy\+\_\+p\+Gpio, \mbox{\hyperlink{_g_p_i_o__interface_8h_a8e4d468ff49c8e962962030d806e0f68}{GPIO\+\_\+\+Pins\+\_\+t}} Copy\+\_\+u8\+Pin\+Number)
+\begin{DoxyCompactList}\small\item\em Reads the input value of a specific GPIO pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of GPIO functions for ATMEGA32A microcontroller. 
+
+This file contains the implementation of GPIO functions, including setting port/pin directions, setting port/pin values, and reading port/pin values.
+
+\begin{DoxyAuthor}{Author}
+Abdelrahman Nassar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/05-\/27 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{_g_p_i_o__program_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_g_p_i_o__program_8c_af7ec2d39b3f1b05f071fa83f61cb5cd1}\index{GPIO\_program.c@{GPIO\_program.c}!GPIO\_u8GetPinValue@{GPIO\_u8GetPinValue}}
+\index{GPIO\_u8GetPinValue@{GPIO\_u8GetPinValue}!GPIO\_program.c@{GPIO\_program.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_u8GetPinValue()}{GPIO\_u8GetPinValue()}}
+{\footnotesize\ttfamily \label{_g_p_i_o__program_8c_af7ec2d39b3f1b05f071fa83f61cb5cd1} 
+u8 GPIO\+\_\+u8\+Get\+Pin\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_i_o__t}{GPIO\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Copy\+\_\+p\+Gpio}{, }\item[{\mbox{\hyperlink{_g_p_i_o__interface_8h_a8e4d468ff49c8e962962030d806e0f68}{GPIO\+\_\+\+Pins\+\_\+t}}}]{Copy\+\_\+u8\+Pin\+Number}{}\end{DoxyParamCaption})}
+
+
+
+Reads the input value of a specific GPIO pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Copy\+\_\+p\+Gpio} & Pointer to the GPIO port structure -\/ can be a value from \doxylink{group___g_p_i_o___registers}{GPIO Registers}. \\
+\hline
+{\em Copy\+\_\+u8\+Pin\+Number} & Pin number to read. See \doxylink{_g_p_i_o__interface_8h_a8e4d468ff49c8e962962030d806e0f68}{GPIO\+\_\+\+Pins\+\_\+t}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the specified pin (0 or 1). 
+\end{DoxyReturn}
+\Hypertarget{_g_p_i_o__program_8c_a71128281bb12827c6720533d5895f030}\index{GPIO\_program.c@{GPIO\_program.c}!GPIO\_u8GetPortValue@{GPIO\_u8GetPortValue}}
+\index{GPIO\_u8GetPortValue@{GPIO\_u8GetPortValue}!GPIO\_program.c@{GPIO\_program.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_u8GetPortValue()}{GPIO\_u8GetPortValue()}}
+{\footnotesize\ttfamily \label{_g_p_i_o__program_8c_a71128281bb12827c6720533d5895f030} 
+u8 GPIO\+\_\+u8\+Get\+Port\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_i_o__t}{GPIO\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Copy\+\_\+p\+Gpio}{}\end{DoxyParamCaption})}
+
+
+
+Reads the input value of an entire GPIO port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Copy\+\_\+p\+Gpio} & Pointer to the GPIO port structure -\/ can be a value from \doxylink{group___g_p_i_o___registers}{GPIO Registers}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the input register (PIN) for the specified port. 
+\end{DoxyReturn}
+\Hypertarget{_g_p_i_o__program_8c_a486101d7eaf36a6ca2522232e74e15f7}\index{GPIO\_program.c@{GPIO\_program.c}!GPIO\_vSetPinDirection@{GPIO\_vSetPinDirection}}
+\index{GPIO\_vSetPinDirection@{GPIO\_vSetPinDirection}!GPIO\_program.c@{GPIO\_program.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_vSetPinDirection()}{GPIO\_vSetPinDirection()}}
+{\footnotesize\ttfamily \label{_g_p_i_o__program_8c_a486101d7eaf36a6ca2522232e74e15f7} 
+void GPIO\+\_\+v\+Set\+Pin\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_i_o__t}{GPIO\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Copy\+\_\+p\+Gpio}{, }\item[{\mbox{\hyperlink{_g_p_i_o__interface_8h_a8e4d468ff49c8e962962030d806e0f68}{GPIO\+\_\+\+Pins\+\_\+t}}}]{Copy\+\_\+u8\+Pin\+Number}{, }\item[{\mbox{\hyperlink{_g_p_i_o__interface_8h_a96e4219a73bb1f4b78085a295edf2a38}{GPIO\+\_\+\+Direction\+\_\+t}}}]{Copy\+\_\+u8\+Direction}{}\end{DoxyParamCaption})}
+
+
+
+Sets the direction of a specific GPIO pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Copy\+\_\+p\+Gpio} & Pointer to the GPIO port structure -\/ can be a value from \doxylink{group___g_p_i_o___registers}{GPIO Registers}. \\
+\hline
+{\em Copy\+\_\+u8\+Pin\+Number} & Pin number to configure. See \doxylink{_g_p_i_o__interface_8h_a8e4d468ff49c8e962962030d806e0f68}{GPIO\+\_\+\+Pins\+\_\+t}. \\
+\hline
+{\em Copy\+\_\+u8\+Direction} & Desired direction (OUTPUT, INPUT\+\_\+\+FLOATING, INPUT\+\_\+\+PULLUP). See \doxylink{_g_p_i_o__interface_8h_a96e4219a73bb1f4b78085a295edf2a38}{GPIO\+\_\+\+Direction\+\_\+t}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_g_p_i_o__program_8c_a19b910e04934df92e62d4cc84cc339c6}\index{GPIO\_program.c@{GPIO\_program.c}!GPIO\_vSetPinValue@{GPIO\_vSetPinValue}}
+\index{GPIO\_vSetPinValue@{GPIO\_vSetPinValue}!GPIO\_program.c@{GPIO\_program.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_vSetPinValue()}{GPIO\_vSetPinValue()}}
+{\footnotesize\ttfamily \label{_g_p_i_o__program_8c_a19b910e04934df92e62d4cc84cc339c6} 
+void GPIO\+\_\+v\+Set\+Pin\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_i_o__t}{GPIO\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Copy\+\_\+p\+Gpio}{, }\item[{\mbox{\hyperlink{_g_p_i_o__interface_8h_a8e4d468ff49c8e962962030d806e0f68}{GPIO\+\_\+\+Pins\+\_\+t}}}]{Copy\+\_\+u8\+Pin\+Number}{, }\item[{\mbox{\hyperlink{_g_p_i_o__interface_8h_af0229a5a9e5c43d134e4549b505bf0a1}{GPIO\+\_\+\+Output\+\_\+t}}}]{Copy\+\_\+u8\+Value}{}\end{DoxyParamCaption})}
+
+
+
+Sets the output value of a specific GPIO pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Copy\+\_\+p\+Gpio} & Pointer to the GPIO port structure -\/ can be a value from \doxylink{group___g_p_i_o___registers}{GPIO Registers}. \\
+\hline
+{\em Copy\+\_\+u8\+Pin\+Number} & Pin number to configure. See \doxylink{_g_p_i_o__interface_8h_a8e4d468ff49c8e962962030d806e0f68}{GPIO\+\_\+\+Pins\+\_\+t}. \\
+\hline
+{\em Copy\+\_\+u8\+Value} & Desired output value (HIGH or LOW). See \doxylink{_g_p_i_o__interface_8h_af0229a5a9e5c43d134e4549b505bf0a1}{GPIO\+\_\+\+Output\+\_\+t}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_g_p_i_o__program_8c_a7a447f11b3ad64c618fbe49d368c4da3}\index{GPIO\_program.c@{GPIO\_program.c}!GPIO\_vSetPortDirection@{GPIO\_vSetPortDirection}}
+\index{GPIO\_vSetPortDirection@{GPIO\_vSetPortDirection}!GPIO\_program.c@{GPIO\_program.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_vSetPortDirection()}{GPIO\_vSetPortDirection()}}
+{\footnotesize\ttfamily \label{_g_p_i_o__program_8c_a7a447f11b3ad64c618fbe49d368c4da3} 
+void GPIO\+\_\+v\+Set\+Port\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_i_o__t}{GPIO\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Copy\+\_\+p\+Gpio}{, }\item[{\mbox{\hyperlink{_g_p_i_o__interface_8h_a96e4219a73bb1f4b78085a295edf2a38}{GPIO\+\_\+\+Direction\+\_\+t}}}]{Copy\+\_\+u8\+Direction}{}\end{DoxyParamCaption})}
+
+
+
+Sets the direction of an entire GPIO port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Copy\+\_\+p\+Gpio} & Pointer to the GPIO port structure -\/ can be a value from \doxylink{group___g_p_i_o___registers}{GPIO Registers}. \\
+\hline
+{\em Copy\+\_\+u8\+Direction} & Desired direction (OUTPUT, INPUT\+\_\+\+FLOATING, INPUT\+\_\+\+PULLUP). See \doxylink{_g_p_i_o__interface_8h_a96e4219a73bb1f4b78085a295edf2a38}{GPIO\+\_\+\+Direction\+\_\+t}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_g_p_i_o__program_8c_a84e32192f59efba23653937a05ec15e9}\index{GPIO\_program.c@{GPIO\_program.c}!GPIO\_vSetPortValue@{GPIO\_vSetPortValue}}
+\index{GPIO\_vSetPortValue@{GPIO\_vSetPortValue}!GPIO\_program.c@{GPIO\_program.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_vSetPortValue()}{GPIO\_vSetPortValue()}}
+{\footnotesize\ttfamily \label{_g_p_i_o__program_8c_a84e32192f59efba23653937a05ec15e9} 
+void GPIO\+\_\+v\+Set\+Port\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_i_o__t}{GPIO\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Copy\+\_\+p\+Gpio}{, }\item[{\mbox{\hyperlink{_g_p_i_o__interface_8h_af0229a5a9e5c43d134e4549b505bf0a1}{GPIO\+\_\+\+Output\+\_\+t}}}]{Copy\+\_\+u8\+Value}{}\end{DoxyParamCaption})}
+
+
+
+Sets the output value of an entire GPIO port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Copy\+\_\+p\+Gpio} & Pointer to the GPIO port structure -\/ can be a value from \doxylink{group___g_p_i_o___registers}{GPIO Registers}. \\
+\hline
+{\em Copy\+\_\+u8\+Value} & Desired output value (HIGH or LOW). See \doxylink{_g_p_i_o__interface_8h_af0229a5a9e5c43d134e4549b505bf0a1}{GPIO\+\_\+\+Output\+\_\+t}. \\
+\hline
+\end{DoxyParams}

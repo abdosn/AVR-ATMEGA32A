@@ -1,0 +1,41 @@
+\doxysection{atmega32.\+h}
+\hypertarget{atmega32_8h_source}{}\label{atmega32_8h_source}\index{MCAL/atmega32.h@{MCAL/atmega32.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ATMEGA32\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ATMEGA32\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../SERVICES/STD\_TYPES.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ USE\_ASSERT}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifdef\ USE\_ASSERT}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ assert\_param(expr)\ (expr)\ ?\ ((void)0)\ :\ (exit(EXIT\_FAILURE))}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ assert\_param(expr)\ ((void)0)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{/*\ Register\ Description\ */}}
+\DoxyCodeLine{00015\ \textcolor{comment}{/*\ GPIO\ */}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ GPIOA\_BASE\_ADDR\ (0x39)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ GPIOB\_BASE\_ADDR\ (0x36)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ GPIOC\_BASE\_ADDR\ (0x33)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ GPIOD\_BASE\_ADDR\ (0x30)}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{volatile}\ u8\ \mbox{\hyperlink{struct_g_p_i_o__t_a94091b6bfd75cf38dd9fec469e8a0f13}{PIN}};\ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{volatile}\ u8\ \mbox{\hyperlink{struct_g_p_i_o__t_a8e9b905705a037928df38cdaef0551f6}{DDR}};\ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{volatile}\ u8\ \mbox{\hyperlink{struct_g_p_i_o__t_ae53ef363293be62aa3b89bd1e79a8f07}{PORT}};\ }
+\DoxyCodeLine{00034\ \}\ \mbox{\hyperlink{struct_g_p_i_o__t}{GPIO\_t}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ GPIOA\ ((GPIO\_t\ *)GPIOA\_BASE\_ADDR)\ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ GPIOB\ ((GPIO\_t\ *)GPIOB\_BASE\_ADDR)\ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ GPIOC\ ((GPIO\_t\ *)GPIOC\_BASE\_ADDR)\ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ GPIOD\ ((GPIO\_t\ *)GPIOD\_BASE\_ADDR)\ }\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
